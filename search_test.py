@@ -34,4 +34,6 @@ def search_mits(query_text: str, top_k: int = 3):
         print(f"Content Chunk:\n{payload.get('text')[:300]}...")
 
 if __name__ == "__main__":
-    search_mits("What facilities are available in the chemistry department?")
+    query = input("enter the question : ")
+    if query.strip():
+        search_mits(query)
